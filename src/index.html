@@ -14,14 +14,50 @@
   <body class="bg-success d-flex justify-content-center">
     <div
       id="card"
-      class="col-3 bg-light mt-3 border rounded d-flex flex-column justify-content-between"
+      class="col-3 bg-light mt-3 rounded mb rounded d-flex flex-column justify-content-between"
       style="height: 700px;"
     >
       <span id="figureOne" style="font-size: 70px;">♥ </span>
-      <h1 id="number" class="align-self-center" style="font-size: 200px;">8</h1>
+      <h1 id="number" class="align-self-center" style="font-size: 200px;">
+        8
+      </h1>
       <span id="figureTwo" class="align-self-end" style="font-size: 70px;"
         >♥
       </span>
+      <div
+        class="inputs mt-3 bg-success d-flex flex-column justify-content-end "
+      >
+        <div class="input-group mt-3">
+          <span class="input-group-text"><strong>Width:</strong></span>
+          <input
+            type="text"
+            id="widthInput"
+            class="form-control"
+            placeholder="Put your width "
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            value=""
+          />
+        </div>
+        <div class="input-group mt-3">
+          <span class="input-group-text"><strong>Height:</strong></span>
+          <input
+            type="text"
+            id="heightInput"
+            class="form-control"
+            placeholder="Put your height"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            value=""
+          />
+        </div>
+        <div class="botones mt-3  d-flex justify-content-center">
+          <button id="btn" type="button" class="btn btn-primary mx-5">
+            Random
+          </button>
+          <button id="btn2" type="button" class="btn btn-danger">Apply</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
