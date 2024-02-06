@@ -5,8 +5,8 @@ window.onload = function() {
   let number = document.getElementById("number");
   let btn = document.getElementById("btn");
   let card = document.getElementById("card");
-  let inputWidth = document.getElementById("widthInput"); // Corregido el nombre de la variable
-  let inputHeight = document.getElementById("heightInput"); // Corregido el nombre de la variable
+  let inputWidth = document.getElementById("widthInput");
+  let inputHeight = document.getElementById("heightInput");
   let btn2 = document.getElementById("btn2");
 
   // Función para generar números y figuras
@@ -23,32 +23,24 @@ window.onload = function() {
     figureTwo.innerHTML = randomFigures;
     number.innerHTML = randomNumber;
 
-    // Cambiar color a rojo si la figura es corazón o diamante
     if (randomFigures == "♥" || randomFigures == "♦") {
       figureTwo.style.color = "red";
       figureOne.style.color = "red";
       number.style.color = "red";
     } else {
-      // Restablecer el color a negro si no es corazón ni diamante
       figureTwo.style.color = "black";
       figureOne.style.color = "black";
       number.style.color = "black";
     }
   }
 
-  // Llamar a la función al cargar la página
   generateRandom();
 
-  // Agregar evento al botón
-  btn.addEventListener("click", function event() {
-    // Llamar a la función al hacer clic en el botón
-    generateRandom();
-  });
+  btn.addEventListener("click", generateRandom);
 
-  // Corregir typo en el nombre de la función
   function changeDimension() {
-    heightNew = inputHeight.value + "px"; // Corregido el nombre de la variable
-    widthNew = inputWidth.value + "px"; // Corregido el nombre de la variable
+    heightNew = inputHeight.value + "px";
+    widthNew = inputWidth.value + "px";
     card.style.height = heightNew;
     card.style.width = widthNew;
   }
